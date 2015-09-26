@@ -11,6 +11,10 @@
 
 #include "Vex_Competition_Includes.c"   //Main competition background code...do not modify!
 
+#define C1LX vexRT[Ch4]
+#define C1LY vexRT[Ch3]
+#define C1RX vexRT[Ch1]
+
 void pre_auton()
 {
   bStopTasksBetweenModes = true;
@@ -19,7 +23,7 @@ void pre_auton()
 
 task autonomous()
 {
-	
+
 }
 
 task usercontrol()
@@ -28,13 +32,13 @@ task usercontrol()
 
 	while (true)
 	{
-		//tank drive
-		motor[leftWheel1] = vexRT(Ch3);
-		motor[leftWheel2] = vexRT(Ch3);
-		motor[rightWheel1] = vexRT(Ch2);
-		motor[rightWheel2] = vexRT(Ch2);
-		
+    // Y component, X component, Rotation
+		motor[leftWheel1] = -C1LY - C1LX - C1RX;
+		motor[rightWheel1] =  C1LY - C1LX - C1RX;
+		motor[rightWheel2] =  C1LY + C1LX - C1RX;
+		motor[leftWheel2] = -C1LY + C1LX - C1RX;
+
 		//Anywhere from 25-50 Msec pause
-		wait1Msec(30); 
+		wait1Msec(30);
 	}
 }
