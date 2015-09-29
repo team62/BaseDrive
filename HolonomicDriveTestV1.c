@@ -33,10 +33,10 @@ task usercontrol()
 	while (true)
 	{
     // Y component, X component, Rotation
-		motor[leftWheel1] = -C1LY - C1LX - C1RX;
-		motor[rightWheel1] =  C1LY - C1LX - C1RX;
-		motor[rightWheel2] =  C1LY + C1LX - C1RX;
-		motor[leftWheel2] = -C1LY + C1LX - C1RX;
+		motor[leftWheel1]   = -C1LY - C1LX - C1RX;
+		motor[rightWheel1]  =  C1LY - C1LX - C1RX;
+		motor[rightWheel2]  =  C1LY + C1LX - C1RX;
+		motor[leftWheel2]   = -C1LY + C1LX - C1RX;
 
 		//Anywhere from 25-50 Msec pause
 		wait1Msec(30);
