@@ -28,11 +28,25 @@ task usercontrol()
 
 	while (true)
 	{
-		//tank drive
-		motor[leftWheel1] = vexRT(Ch3);
-		motor[leftWheel2] = vexRT(Ch3);
-		motor[rightWheel1] = vexRT(Ch2);
-		motor[rightWheel2] = vexRT(Ch2);
+    //tank drive
+    
+    //left wheels
+    if(abs(vexRT(ch3)<10)) {
+      motor[leftWheel1] = 0;
+      motor[leftWheel2] = 0;
+    } else {
+  		motor[leftWheel1] = vexRT(Ch3);
+  		motor[leftWheel2] = vexRT(Ch3);
+    }
+    
+    //left wheels
+    if(abs(vexRT(Ch2)<10)) {
+      motor[rightWheel1] = 0;
+      motor[rightWheel2] = 0;
+    } else {
+		  motor[rightWheel1] = vexRT(Ch2);
+		  motor[rightWheel2] = vexRT(Ch2);
+    }
 		
 		//Anywhere from 25-50 Msec pause
 		wait1Msec(30); 
