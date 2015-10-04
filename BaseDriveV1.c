@@ -26,10 +26,10 @@ task autonomous()
 
 task usercontrol()
 {
-	// User control code here, inside the loop
+  // User control code here, inside the loop
 
-	while (true)
-	{
+  while (true)
+  {
     //tank drive
     
     //left wheels
@@ -50,7 +50,7 @@ task usercontrol()
       motor[rightWheel2] = vexRT(Ch2);
     }
     
-		//Anywhere from 25-50 Msec pause
-		wait1Msec(30); 
+    //Anywhere from 25-50 Msec pause
+    wait1Msec(30); 
 	}
 }
