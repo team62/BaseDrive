@@ -1,6 +1,6 @@
 #pragma config(Motor,  port1,           rightWheel1,   tmotorVex393_HBridge, openLoop)
-#pragma config(Motor,  port2,           rightWheel2,   tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port3,           rightWheel3,   tmotorVex393_MC29, openLoop)
+#pragma config(Motor,  port2,           rightWheel2,   tmotorVex393_MC29, openLoop, reversed)
+#pragma config(Motor,  port3,           rightWheel3,   tmotorVex393_MC29, openLoop, reversed)
 #pragma config(Motor,  port4,           leftWheel2,    tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port5,           leftWheel3,    tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port6,           topShooter,    tmotorVex393_MC29, openLoop)
@@ -11,7 +11,7 @@
 
 #pragma platform(VEX)
 
-//Competition Control and Duration Settings
+//Competition Control and Duration Settings 
 #pragma competitionControl(Competition)
 
 #include "Vex_Competition_Includes.c"   //Main competition background code...do not modify!
