@@ -52,5 +52,5 @@ task usercontrol()
     
     //Anywhere from 25-50 Msec pause
     wait1Msec(30); 
-	}
+  }
 }
